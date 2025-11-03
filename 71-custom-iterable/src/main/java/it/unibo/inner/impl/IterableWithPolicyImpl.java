@@ -43,7 +43,15 @@ public class IterableWithPolicyImpl<T> implements IterableWithPolicy<T>{
 
         @Override
         public boolean hasNext() {
-            return counter < IterableWithPolicyImpl.this.array.length;
+            if (counter < IterableWithPolicyImpl.this.array.length){
+                if (predicate.test(array[counter])){
+                    return true;
+                } else{
+                    counter++;
+                    return hasNext();
+                }
+            }
+            return false;
         }
 
         @Override
