@@ -53,25 +53,24 @@ public final class MonthSorterNested implements MonthSorter {
     }
 
     public enum Month{
-        JANUARY("january", 1, 31),
-        FEBRUARY("february", 2, 28),
-        MARCH("march", 3, 31),
-        APRIL("april", 4, 30),
-        MAY("may", 5, 31),
-        JUNE("june", 6, 30),
-        JULY("july", 7, 31),
-        AUGUST("august", 8, 31),
-        SEPTEMBER("september", 9, 30),
-        OCTOBER("october", 10, 31),
-        NOVEMBER("november", 11, 30),
-        DECEMBER("december", 12, 31);
+        JANUARY(1, 31),
+        FEBRUARY(2, 28),
+        MARCH(3, 31),
+        APRIL(4, 30),
+        MAY(5, 31),
+        JUNE(6, 30),
+        JULY(7, 31),
+        AUGUST(8, 31),
+        SEPTEMBER(9, 30),
+        OCTOBER(10, 31),
+        NOVEMBER(11, 30),
+        DECEMBER(12, 31);
 
-        private String name;
+        
         private int position;
         private int nDays;
         
-        private Month(String name, int position, int nDays){
-            this.name = name;
+        private Month( int position, int nDays){
             this.position = position;
             this.nDays = nDays;
 
