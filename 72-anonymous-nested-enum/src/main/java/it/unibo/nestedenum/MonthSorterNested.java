@@ -32,7 +32,7 @@ public final class MonthSorterNested implements MonthSorter {
             public int compare(String arg0, String arg1) {
                 Month first = findMonth(arg0);
                 Month second = findMonth(arg1);
-                return first.position - second.position;
+                return first.ordinal() - second.ordinal();
             }
             
         };
@@ -53,25 +53,24 @@ public final class MonthSorterNested implements MonthSorter {
     }
 
     public enum Month{
-        JANUARY(1, 31),
-        FEBRUARY(2, 28),
-        MARCH(3, 31),
-        APRIL(4, 30),
-        MAY(5, 31),
-        JUNE(6, 30),
-        JULY(7, 31),
-        AUGUST(8, 31),
-        SEPTEMBER(9, 30),
-        OCTOBER(10, 31),
-        NOVEMBER(11, 30),
-        DECEMBER(12, 31);
+        JANUARY(31),
+        FEBRUARY(28),
+        MARCH(31),
+        APRIL(30),
+        MAY(31),
+        JUNE(30),
+        JULY(31),
+        AUGUST(31),
+        SEPTEMBER(30),
+        OCTOBER(31),
+        NOVEMBER(30),
+        DECEMBER(31);
 
         
         private int position;
         private int nDays;
         
-        private Month( int position, int nDays){
-            this.position = position;
+        private Month(int nDays){
             this.nDays = nDays;
 
         }
