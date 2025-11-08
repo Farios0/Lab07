@@ -69,7 +69,7 @@ class TestStrictBankAccount {
      */
     @Test
     public void testWithdrawingTooMuch() {
-       assertThrows(IllegalArgumentException.class, new Executable() {
+        assertThrows(IllegalArgumentException.class, new Executable() {
 
             @Override
             public void execute() throws Throwable {
